@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap');
+
+
+body{
+    background-color: hsl(0, 100%, 74%);
+    background-image: url('images/bg-intro-desktop.png');
+    font-family: 'Poppins';
+   
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin:3% auto;
+    box-sizing: border-box;
+    
+}
+.text{
+    padding: 8rem 0rem 0rem 2rem;
+    box-sizing: border-box;
+}
+h1{
+    line-height: 2rem;
+    font-weight: bolder;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Poppins';
+}
+.learn{
+    font-size: 1rem;
+    color: white;
+}
+.subscribe{
+    text-align: center;
+    padding: 0.3 rem 0.6rem;
+    margin: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem  hsl(246, 25%, 77%);
+    background-color: hsl(248, 32%, 49%);
+    box-sizing: border-box;
+    color: white;
+    
+}
+
+form{
+    margin: 1.5rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem  hsl(246, 25%, 77%);
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.formitem{
+    width: 90%;
+    padding: 1rem;
+    margin: 0.5rem ;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    border: 0.01rem solid black;
+    font-family: 'Poppins';
+}
+.formitemsubmit{
+    width: 98%;
+    padding: 1rem;
+    margin: 0.5rem ;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    border: 0rem solid black;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-family: 'Poppins';
+}
+.formitemsubmit:hover{
+    background-color: hsl(154, 75%, 76%);
+
+}
+.errormessage{
+    color: red;
+    float: right;
+    display: none;
+    font-size: 0.6rem;
+    font-weight: bolder;
+    margin: 0%;
+    font-style: italic;
+    font-family: 'Poppins';
+}
+input:not(:focus):not(:placeholder-shown):invalid{
+    border: 1px solid hsl(0, 100%, 74%);
+    background: transparent;
+    background-image: url('images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+    float: right;
+}
+input:not(:focus):not(:placeholder-shown):invalid ~ .errormessage{
+    display: block;
+}
+
+
+
+
+
+
+@media (max-width:500px) {
+    body{
+        background-image: url('/images/bg-intro-mobile.png');
+    }
+.container{
+    flex-direction: column;
+}
+}
+@media(max-width:800px){
+    body{
+        background-image: url('/images/bg-intro-mobile.png');
+    }
+    .container{
+        flex-direction: column;
+    }
+}
