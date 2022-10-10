@@ -19,12 +19,12 @@ if (isset($_POST['submit'])){
         fputcsv($file,$data);
         fclose($file);
         echo "file written";
-        echo file_get_contents("userdata.csv");
+        echo "<h2> You Entered : </h2>". file_get_contents("userdata.csv");
 
     }
     else{
         echo "No data";
     }
-// header('location:index.html');
+// header('location:index.php');
 }
 ?>
