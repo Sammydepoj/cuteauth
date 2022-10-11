@@ -8,7 +8,7 @@ $name = $_POST['name'];
 
 if (isset($_POST['submit'])){
 
-     $data=array($name,$email,$date,$gender,$country);
+     $data=array($name,$email,$date,$gender,$country."</br>");
 
     // var_dump ($data);
 
@@ -19,12 +19,27 @@ if (isset($_POST['submit'])){
         fputcsv($file,$data);
         fclose($file);
         echo "file written";
-        echo "<h2> You Entered : </h2>". file_get_contents("userdata.csv");
 
+        // $path = "userdata.csv";
+        // $getfile = file_get_contents($path);
+        // $removedNewLine = explode(PHP_EOL,$getfile);
+        // foreach ($removedNewLine as $key => $string){
+        //     $ecpEach = explode (':', $string);
+        //     $finalArray[$ecpEach[0]] =$ecpEach[1];
+        // }
+
+        // print_r($finalArray);
+        // exit();
+
+        $user_list= file_get_contents("userdata.csv");
+            echo "<h2> You Entered : </h2>";
+        print_r ($user_list);
+            
     }
     else{
         echo "No data";
     }
+    echo "<button><a href='index.php'>Click to go back</a></button> </br>";
 // header('location:index.php');
 }
 ?>
