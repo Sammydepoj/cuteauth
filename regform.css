@@ -9,7 +9,7 @@ body{
 }
 .container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin:3% auto;
     box-sizing: border-box;
     
@@ -43,7 +43,7 @@ h1{
 }
 
 form{
-    margin: 1.5rem;
+    margin: 1rem;
     background-color: white;
     padding: 2rem;
     border-radius: 0.5rem;
@@ -99,7 +99,14 @@ input:not(:focus):not(:placeholder-shown):invalid ~ .errormessage{
     display: block;
 }
 
-
+@media(max-width:800px){
+    body{
+        background-image: url('/images/bg-intro-mobile.png');
+    }
+    .container{
+        flex-direction: column;
+    }
+}
 
 
 
@@ -111,12 +118,4 @@ input:not(:focus):not(:placeholder-shown):invalid ~ .errormessage{
 .container{
     flex-direction: column;
 }
-}
-@media(max-width:800px){
-    body{
-        background-image: url('/images/bg-intro-mobile.png');
-    }
-    .container{
-        flex-direction: column;
-    }
 }
